@@ -1,4 +1,6 @@
-#N canvas 0 23 2560 1488 12;
+#N canvas 0 25 1680 916 12;
+#X declare -path list-abs;
+#X declare -lib zexy;
 #X obj 1092 37 notein;
 #X obj 1092 68 pack 0 0;
 #X obj 1092 98 poly 8 1;
@@ -6,12 +8,12 @@
 #X obj 1092 163 route 1 2 3 4 5 6 7 8;
 #X obj 7 296 unpack 0 0;
 #X obj 7 415 temperament;
-#X floatatom 118 372 5 0 136 0 - - -;
+#X floatatom 118 372 5 0 136 0 - - - 0;
 #X text 117 297 0-136 selects different temperaments;
 #X obj 914 1042 dac~;
 #X obj 926 1010 *~;
-#X obj 959 1045 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
+#X obj 959 1045 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
 #X obj 956 1094 line~;
 #X msg 956 1068 \$1 5;
 #X obj 7 511 osc~;
@@ -33,7 +35,7 @@
 #X text 111 605 ar envelope;
 #X obj 387 300 unpack 0 0;
 #X obj 387 419 temperament;
-#X floatatom 498 376 5 0 136 0 - - -;
+#X floatatom 498 376 5 0 136 0 - - - 0;
 #X text 497 301 0-136 selects different temperaments;
 #X obj 387 515 osc~;
 #X obj 498 321 loadbang;
@@ -51,7 +53,7 @@
 #X text 491 609 ar envelope;
 #X obj 767 306 unpack 0 0;
 #X obj 767 425 temperament;
-#X floatatom 878 382 5 0 136 0 - - -;
+#X floatatom 878 382 5 0 136 0 - - - 0;
 #X text 877 307 0-136 selects different temperaments;
 #X obj 767 521 osc~;
 #X obj 878 327 loadbang;
@@ -67,7 +69,7 @@
 #X text 871 615 ar envelope;
 #X obj 1147 310 unpack 0 0;
 #X obj 1147 429 temperament;
-#X floatatom 1258 386 5 0 136 0 - - -;
+#X floatatom 1258 386 5 0 136 0 - - - 0;
 #X text 1257 311 0-136 selects different temperaments;
 #X obj 1147 525 osc~;
 #X obj 1258 331 loadbang;
@@ -83,7 +85,7 @@
 #X text 1251 619 ar envelope;
 #X obj 1545 312 unpack 0 0;
 #X obj 1545 431 temperament;
-#X floatatom 1656 388 5 0 136 0 - - -;
+#X floatatom 1656 388 5 0 136 0 - - - 0;
 #X text 1655 313 0-136 selects different temperaments;
 #X obj 1545 527 osc~;
 #X obj 1656 333 loadbang;
@@ -99,7 +101,7 @@
 #X text 1649 621 ar envelope;
 #X obj 1925 316 unpack 0 0;
 #X obj 1925 435 temperament;
-#X floatatom 2036 392 5 0 136 0 - - -;
+#X floatatom 2036 392 5 0 136 0 - - - 0;
 #X text 2035 317 0-136 selects different temperaments;
 #X obj 1925 531 osc~;
 #X obj 2036 337 loadbang;
@@ -115,7 +117,7 @@
 #X text 2029 625 ar envelope;
 #X obj 2305 322 unpack 0 0;
 #X obj 2305 441 temperament;
-#X floatatom 2416 398 5 0 136 0 - - -;
+#X floatatom 2416 398 5 0 136 0 - - - 0;
 #X text 2415 323 0-136 selects different temperaments;
 #X obj 2305 537 osc~;
 #X obj 2416 343 loadbang;
@@ -131,7 +133,7 @@
 #X text 2409 631 ar envelope;
 #X obj 2685 326 unpack 0 0;
 #X obj 2685 445 temperament;
-#X floatatom 2796 402 5 0 136 0 - - -;
+#X floatatom 2796 402 5 0 136 0 - - - 0;
 #X text 2795 327 0-136 selects different temperaments;
 #X obj 2685 541 osc~;
 #X obj 2796 347 loadbang;
@@ -145,10 +147,10 @@
 #X obj 2751 635 line;
 #X msg 2796 375 11;
 #X text 2789 635 ar envelope;
-#X floatatom 17 543 5 0 0 0 - - -;
-#X floatatom 73 657 5 0 0 0 - - -;
-#X floatatom 402 545 5 0 0 0 - - -;
-#X floatatom 781 550 5 0 0 0 - - -;
+#X floatatom 17 543 5 0 0 0 - - - 0;
+#X floatatom 73 657 5 0 0 0 - - - 0;
+#X floatatom 402 545 5 0 0 0 - - - 0;
+#X floatatom 781 550 5 0 0 0 - - - 0;
 #X msg 833 554 0 1000;
 #X msg 865 583 1 1000;
 #X msg 1213 558 0 1000;
@@ -161,11 +163,13 @@
 #X msg 2403 599 1 1000;
 #X msg 2751 574 0 1000;
 #X msg 2783 603 1 1000;
-#X floatatom 1162 554 5 0 0 0 - - -;
-#X floatatom 1566 558 5 0 0 0 - - -;
-#X floatatom 1937 561 5 0 0 0 - - -;
-#X floatatom 2322 570 5 0 0 0 - - -;
-#X floatatom 2706 576 5 0 0 0 - - -;
+#X floatatom 1162 554 5 0 0 0 - - - 0;
+#X floatatom 1566 558 5 0 0 0 - - - 0;
+#X floatatom 1937 561 5 0 0 0 - - - 0;
+#X floatatom 2322 570 5 0 0 0 - - - 0;
+#X floatatom 2706 576 5 0 0 0 - - - 0;
+#X obj 295 38 declare -path list-abs;
+#X obj 297 76 declare -lib zexy;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 1 0 2 0;
